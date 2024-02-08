@@ -12,7 +12,7 @@ let messageSentToday = false;
 // Replace 'YOUR_TOKEN' with your actual bot token
 const token = "6820613356:AAF7TEXNNJhRSK1UQLekN1XyffPhAqBpQr8";
 const googleAppsScriptUrl = "https://script.google.com/macros/s/AKfycbzjS90_czsg2nb9yvwZYP0xHn9z4-RCg0UYAKnKoS2q2qa1ttd9Wvf-i8CrZUJNYoBjww/exec";
-const googleAppsScriptTreck = "https://script.google.com/macros/s/AKfycbw1VFFTkg8F7IwlZqASDU5mtbDRA5iJc6ez-Ldp1X2RHdDNSsn_Cb_VaFKWZVrGB_69Rg/exec";
+const googleAppsScriptTreck = "https://script.google.com/macros/s/AKfycbz0lgjhnoTdqdPcboTJpwy3Hwakm3-DeXRnCRHc5-dmCmyCJxQjMB54wKeKyzdBjn5f0w/exec";
 
 
 // Create a new bot instance
@@ -459,3 +459,7 @@ async function saveToGoogleSheets(msg, data) {
       });
     });
   }
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+      console.log(`Server is listening on port ${port}`);
+  });
